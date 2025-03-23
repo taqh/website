@@ -2,10 +2,10 @@ import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { cn } from '@/lib/utils';
 import type { Metadata, Viewport } from 'next';
-import { ThemeProvider } from 'next-themes';
-import { Barlow,  } from 'next/font/google';
+import { Barlow, Geist_Mono } from 'next/font/google';
 import '@/styles/globals.css';
 import { SITE } from '@/lib/seo';
+import Providers from './providers';
 
 const barlow = Barlow({
   variable: '--font-sans',
@@ -13,10 +13,10 @@ const barlow = Barlow({
   weight: ['400', '500', '600', '700'],
 });
 
-// const geistMono = Geist_Mono({
-//   variable: '--font-mono',
-//   subsets: ['latin'],
-// });
+const geistMono = Geist_Mono({
+  variable: '--font-mono',
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://rivo.gg'),
@@ -29,10 +29,27 @@ export const metadata: Metadata = {
     title: SITE.title2,
     card: 'summary_large_image',
     description: SITE.description,
+    images: [
+      {
+        url: '/twitter-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   openGraph: {
     title: SITE.title2,
     description: SITE.description,
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: {
+    icon: '/Logo.png',
   },
   robots: {
     index: true,
@@ -62,20 +79,15 @@ export default function RootLayout({
       <html lang='en'>
         <body
           className={cn(
-            'flex min-h-screen w-screen flex-col',
+            'flex min-h-screen w-screen flex-col antialiased',
             barlow.className
           )}
         >
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='dark'
-            enableSystem
-            disableTransitionOnChange
-          >
+          <Providers>
             <Navbar />
             {children}
             <Footer />
-          </ThemeProvider>
+          </Providers>
         </body>
       </html>
     </>

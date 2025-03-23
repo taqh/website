@@ -3,12 +3,16 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'standalone',
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  transpilePackages: ['next-seo'],
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.marblecms.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
       },
       {
         protocol: 'https',

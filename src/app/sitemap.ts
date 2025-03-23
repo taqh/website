@@ -1,6 +1,16 @@
 import type { MetadataRoute } from 'next'
- 
-export default function sitemap(): MetadataRoute.Sitemap {
+import { getPosts } from '@/lib/blog';
+import { SITE } from '@/lib/seo';
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getPosts();
+
+  const postPages: MetadataRoute.Sitemap = posts?.map((post) => ({
+    url: `${SITE.url}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  })) ?? [];
+
   return [
     {
       url: 'https://rivo.gg',
@@ -38,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://rivo.gg/blog',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://rivo.gg/projects/cavescape',
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -55,5 +71,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1,
     },
+    ...postPages,
   ]
 }

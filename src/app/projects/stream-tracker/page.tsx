@@ -7,7 +7,7 @@ import {
   Grid,
   GridItem,
   ImageWrapper,
-} from "@paulos-ui";
+} from "@/components/elements";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivo.gg"),

@@ -10,7 +10,7 @@ import {
   type SystemRequirements,
   SteamWishlistButton,
   ImageGallery,
-} from "@paulos-ui";
+} from "@/components/elements";
 import { Schema } from "@/components/Schema";
 
 export const metadata: Metadata = {
