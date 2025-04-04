@@ -49,17 +49,20 @@ export async function generateMetadata({
           url: image,
           width: 1200,
           height: 630,
+          alt: `${title} - Rivo Projects`,
         },
       ],
     },
     twitter: {
       title,
       description,
+      card: 'summary_large_image',
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
+          alt:  `${title} - Rivo Projects`,
         },
       ],
     },
