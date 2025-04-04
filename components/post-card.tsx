@@ -16,7 +16,7 @@ function PostCard({ post }: PostCardProps) {
   });
 
   return (
-    <li className='group bg-card border rounded-lg hover:shadow-lg transition'>
+    <li className='group bg-accent border rounded-lg hover:shadow-lg transition'>
       <Link href={link} className='flex flex-col'>
         <div className='relative z-10 rounded-t-md min-h-[170px] overflow-hidden'>
           <Image
