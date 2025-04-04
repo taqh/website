@@ -44,27 +44,6 @@ export default function Page() {
 					<h4>Privacy Policy</h4>
 					<Link href="/privacy">https://rivo.gg/privacy</Link>
 				</div>
-				<div>
-					<h4>Gültigkeit dieses Impressums</h4>
-					<span>
-						Dieser rechtliche Hinweis gilt für die folgenden Websites, Social Media Konten und andere Dienste, sofern
-						sie hier aufgeführt sind.
-					</span>
-				</div>
-				<ul>
-					<li>
-						<a href="https://wouldyoubot.com/">https://wouldyoubot.com/</a>
-					</li>
-					<li>
-						<a href="https://wouldyoubot.gg/">https://wouldyoubot.gg/</a>
-					</li>
-					<li>
-						<a href="https://rivo.gg/">https://rivo.gg/</a>
-					</li>
-					<li>
-						<a href="https://twitter.com/WouldYouBot/">https://twitter.com/WouldYouBot/</a>
-					</li>
-				</ul>
 			</section>
 		</main>
 	);
