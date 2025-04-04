@@ -1,5 +1,5 @@
-import { ProjectList } from "@/app/projects/components/ProjectList";
-import { ProjectListSkeleton } from "@/app/projects/components/ProjectListSkeleton";
+import { ProjectList } from "@/components/projects/project-list";
+import { ProjectListSkeleton } from "@/components/projects/project-list-skeleton";
 import { Suspense } from "react";
 
 const ProjectPage = async () => {

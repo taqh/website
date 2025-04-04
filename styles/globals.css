@@ -83,39 +83,6 @@
     @apply left-0 w-full;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-semibold;
-  }
-
-  h1 {
-    @apply mb-3 text-4xl text-primary;
-  }
-
-  h2 {
-    @apply mb-2 text-3xl text-primary;
-  }
-
-  h3 {
-    @apply mb-1 text-2xl text-foreground;
-  }
-
-  h4 {
-    @apply text-xl text-foreground;
-  }
-
-  h5 {
-    @apply text-lg text-foreground;
-  }
-
-  h6 {
-    @apply text-foreground;
-  }
-
   .legals {
     @apply mb-8 mt-32 flex flex-col items-center p-6;
   }

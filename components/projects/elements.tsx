@@ -230,11 +230,7 @@ export function ImageWrapper({
   size = 'medium',
   zoom = false,
 }: ImageWrapperProps) {
-  const isWithinPageWrapper = useContext(PageWrapperContext);
 
-  if (!isWithinPageWrapper) {
-    throw new Error('ImageWrapper must be used within a PageWrapper');
-  }
 
   function getSizeClass(size: string) {
     switch (size) {

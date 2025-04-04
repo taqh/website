@@ -1,0 +1,34 @@
+---
+title: "Stream Tracker"
+description: "Universal Music Group and Polydor Records partnered with the Roblox game 'Pls Donate' and their discord server for their popular band Glass Animals. Rivo built the Spotify stream tracker that was used to distribute rewards to the community and track the progress of the album."
+date: "2024-04-03"
+image: "/projects/stream-tracker/og.png"
+slug: "stream-tracker"
+---
+
+import ImageGrid from "@/components/projects/image-grid"
+
+# Stream Tracker (Glass Animals)
+
+Universal Music Group and Polydor Records partnered with the Roblox game 'Pls Donate' and their discord server for their popular band Glass Animals. Rivo built the Spotify stream tracker that was used to distribute rewards to the community and track the progress of the album.
+
+## What is Stream Tracker?
+Stream Tracker was a discord bot that listened to discord status changes and tracked the progress of the new Glass Animals album "I Love You So Fucking Much". Once a user listened to 5 songs they got a code for the limited Roblox UGC "Glass Animals Turquoise Eye Head"
+
+<ImageGrid images={[
+  { src: "/projects/stream-tracker/ugc.webp", alt: "Glass Animals Roblox UGC" }
+]} />
+
+## Challenges
+Due to the sheer size of the Hazem Discord server, the bot had to listen to hundreds of thousands of Discord events in order to correctly process people's progress based on the songs they listened to.
+
+## Tech Stack
+The bot itself was written in JavaScript with the popular discord.js library, this probably wanst the smartest choice but it ended up working out. Database wise we used mongodb together with the mongoose package for node.js
+
+## The Bot in Action
+<ImageGrid images={[
+  { src: "/projects/stream-tracker/Screenshot_1.png", alt: "Glass Animals Bot Screenshot 1" },
+  { src: "/projects/stream-tracker/Screenshot_2.png", alt: "Glass Animals Bot Screenshot 2" },
+  { src: "/projects/stream-tracker/Screenshot_3.png", alt: "Glass Animals Bot Screenshot 3" },
+  { src: "/projects/stream-tracker/Screenshot_4.png", alt: "Glass Animals Bot Screenshot 4" }
+]} /> 

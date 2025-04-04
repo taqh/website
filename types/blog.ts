@@ -6,6 +6,7 @@ export type Post = {
   description: string;
   coverImage: string;
   publishedAt: Date;
+  updatedAt: Date;
   authors: {
     id: string;
     name: string;
@@ -25,6 +26,24 @@ export type Post = {
     author: string;
     url: string;
   } | null;
+};
+
+export type Pagination = {
+  limit: number;
+  currpage: number;
+  nextPage: number | null;
+  prevPage: number | null;
+  totalItems: number;
+  totalPages: number;
+};
+
+export type MarblePostList = {
+  posts: Post[];
+  pagination: Pagination;
+};
+
+export type MarblePost = {
+  post: Post;
 };
 
 export type Tag = {
